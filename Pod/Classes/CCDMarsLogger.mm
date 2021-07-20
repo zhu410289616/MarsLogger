@@ -62,7 +62,9 @@
 - (NSString *)fileDir
 {
     if (nil == _fileDir) {
-        _fileDir = [NSString ccd_dirInDocumentWithPath:@"CCDMarsLog"];
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentPath = paths.firstObject;
+        _fileDir = [documentPath stringByAppendingPathComponent:@"MarsLog"];
 #ifdef DEBUG
         NSLog(@"[CCDMarsLogger] dir: %@", _fileDir);
 #endif
