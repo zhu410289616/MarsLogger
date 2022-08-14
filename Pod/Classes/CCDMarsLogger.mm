@@ -6,7 +6,6 @@
 //
 
 #import "CCDMarsLogger.h"
-#import "NSString+Cicada.h"
 
 #import <sys/xattr.h>
 #import <mars/xlog/xlogger.h>
